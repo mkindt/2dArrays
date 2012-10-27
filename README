@@ -1,0 +1,4 @@
+a templated 2d Array:
+using an actual 2-d array,
+a vector of vectors,
+and a sparse array
