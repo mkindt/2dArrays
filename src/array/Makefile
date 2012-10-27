@@ -1,15 +1,16 @@
-BUILD = ../../build
 CPP = g++
-CPPFLAGS = -Wall -Wextra
+CFLAGS = -Wall -Wextra -Werror
 
-main: main_test.cpp 2dArray.o
-	$(CPP) $(CPPFLAGS) -o test1 main_test.cpp 2dArray.o
+
+
+test: array_gtest.cpp 2dArray.o 
+	$(CPP) $(CFLAGS) -o test22 $^
 
 2dArray.o: 2dArray.h 2dArray.cpp
-	$(CPP) $(CPPFLAGS) -c 2dArray.cpp
+	$(CPP) $(CFLAGS) -c 2dArray.cpp
+
 
 clean:
-	rm -f test1
-	rm -f *.o
-	rm -f *~
-	# rm -f $(BUILD)/main
+	rm -f *.o;
+	rm -f test; rm -f ltest;
+	rm -f *~;
